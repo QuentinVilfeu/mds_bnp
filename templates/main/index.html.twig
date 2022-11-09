@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="col-9 mx-auto text-center mt-4">Bienvenu sur le site de BNP</h1>
+
+    <p class="col-9 mx-auto text-center">
+        Souhaitez-vous découvrir 
+        <a href="{{ path('app_assurance') }}" class="text-white fst-italic">Espace Assurance</a> 
+        ou
+        <a href="{{ path('app_banque') }}" class="text-white fst-italic">Espace Banque</a> 
+        ?
+    </p>
+
+{% endblock %}

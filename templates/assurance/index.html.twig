@@ -1,0 +1,31 @@
+{% extends '_template.html.twig' %}
+
+
+{% block stylesheets %}
+    <style>
+        .assurance{
+            background-color:blue !important;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h2 class="text-white ms-4 mt-4">Assurance BNP</h2>
+    <p class="text-white ms-4 mb-4">Voilà l'index des assurances</p>
+{% endblock %}
+
+{% block firstHeader %}Assurance{% endblock %}
+
+{% block sousMenu %}
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active text-warning" aria-current="page" href="{{path('app_assurance_professionnel')}}">Professionnel</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-warning" href="{{path('app_assurance_particulier')}}">Particulier</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block footer %}{{parent()}} Assurance{% endblock %}
+

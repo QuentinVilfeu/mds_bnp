@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <a href="{{ path('app_main') }}" class="position-absolute top-10 ms-4 text-danger text-decoration-none">Retour à l'accueil</a>
+
+    <div class="assurance col-6 mx-auto rounded-3 bg-success border border-white border-2 mt-3">
+        <h1 class="text-white text-center py-3">{% block firstHeader %}{% endblock %}</h1>
+    </div>
+
+    {% include '_nav.html.twig' %}
+
+    {# Deuxième possibilité pour faire appel à un fichier #}
+    {# {{ include('_nav.html.twig') }} #}
+
+    {% block sousMenu %}{% endblock %}
+
+    <div class="assurance col-6 mx-auto rounded-3 bg-success border border-white border-2 mt-3">
+        {% block content %}{% endblock %}
+    </div>
+
+{% endblock %}
